@@ -1,6 +1,6 @@
-# Calculator 
+# :Calculator:
 
-A simple and functional calculator built using [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev). This project showcases basic arithmetic operations, including addition, subtraction, multiplication, division, as well as advanced features like negation, percentage calculations, and scientific notation for large numbers.
+A simple and functional calculator built using [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev).
 
 ## Features
 
