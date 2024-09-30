@@ -62,6 +62,24 @@ buttons.forEach(button => {
                 secondNumber = '';
                 currentOperator = '';
             }
+        } else if (buttonValue === '+/-') {
+            // If the button is '+/-', negate the current number
+            if (!currentOperator) {
+                firstNumber = String(-Number(firstNumber));
+                updateScreen(formatNumber(firstNumber), `${formatNumber(firstNumber)}`);
+            } else {
+                secondNumber = String(-Number(secondNumber));
+                updateScreen(formatNumber(secondNumber), `${formatNumber(firstNumber)} ${currentOperator} ${formatNumber(secondNumber)}`);
+            }
+        } else if (buttonValue === '%') {
+            // If the button is '%', calculate the percentage
+            if (!currentOperator) {
+                firstNumber = String(Number(firstNumber) / 100);
+                updateScreen(formatNumber(firstNumber), `${formatNumber(firstNumber)}`);
+            } else {
+                secondNumber = String(Number(secondNumber) / 100);
+                updateScreen(formatNumber(secondNumber), `${formatNumber(firstNumber)} ${currentOperator} ${formatNumber(secondNumber)}`);
+            }
         }
     });
 });
@@ -104,6 +122,9 @@ function calculate(num1, num2, operator) {
         case 'x':
             return num1 * num2;
         case '/':
+            if (num2 === 0) {
+                return 'Error: Divide by 0'; // Handle division by zero
+            }
             return num1 / num2;
         default:
             return 'Error';
