@@ -17,4 +17,4 @@ A simple and functional calculator built using [![My Skills](https://skillicons.
 
 
 ## Screenshots
-![App Screenshot](/assets/Screenshot.jpeg)
+![App Screenshot](/assets/calc.jpeg)
