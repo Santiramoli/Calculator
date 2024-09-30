@@ -11,7 +11,8 @@ A simple and functional calculator built using [![My Skills](https://skillicons.
   - Division :heavy_division_sign:
 ### Additional functionalities:
   - Negation `+/-`
-  - Percentage `%`
+  - Percentage `%` ![Percentage Icon](https://link-to-your-percentage-icon.com/icon.png)
+
   - Scientific notation for results exceeding 10 digits.
   - User-friendly interface for ease of use.
 
