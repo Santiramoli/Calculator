@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calc">
-        <div class="screen">
-            <div class="operation">678 + 3456 =</div>
-            <div class="result">89</div>
-        </div>
-        <div class="buttons">
+    <main class="calc">
+        <section class="screen">
+            <div class="operation" id="op">678 + 3456 =</div>
+            <div class="result" id="res">89</div>
+        </section>
+        <section class="buttons">
             <button class="s">AC</button>
             <button class="s">+/-</button>
             <button class="s">%</button>
@@ -32,7 +32,8 @@
             <button class="zero">0</button>
             <button class="n">.</button>
             <button class="o">=</button>
-        </div>
-    </div>
+        </section>
+    </main>
+    <script defer src="script.js"></script>
 </body>
 </html>
