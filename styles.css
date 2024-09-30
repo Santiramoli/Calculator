@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: "Nunito", sans-serif;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: #00c8ff;
+}
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    width: 330px;
+    background-color: #ffffffcd;
+    border-radius: 40px;
+    align-self: center;
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+    gap: 30px;
+}
+
+.screen{
+    height: 220px;
+    width: 300px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+
+.operation{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.result{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.buttons{
+    height: 340px;
+    display: grid;
+    grid-template-columns: 65px 65px 65px 65px;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    gap: 10px;
+    place-items: center;
+    grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    "zero zero . .";
+}
+
+.zero{
+    grid-area: zero;
+    height: 60px;
+    width: 130px;
+    border: none;
+    border-radius: 60px;
+    background-color: #0091ff;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.n{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0091ff;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
+.s{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.o{
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ff9d00;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
