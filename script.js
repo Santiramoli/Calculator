@@ -29,11 +29,11 @@ buttons.forEach(button => {
             if (!currentOperator) {
                 // If no operator is selected, continue forming the first number
                 firstNumber += buttonValue;
-                updateScreen(firstNumber, `${firstNumber}`);
+                updateScreen(formatNumber(firstNumber), `${formatNumber(firstNumber)}`);
             } else {
                 // If an operator is selected, continue forming the second number
                 secondNumber += buttonValue;
-                updateScreen(secondNumber, `${firstNumber} ${currentOperator} ${secondNumber}`);
+                updateScreen(formatNumber(secondNumber), `${formatNumber(firstNumber)} ${currentOperator} ${formatNumber(secondNumber)}`);
             }
         } else if (buttonValue === 'AC') {
             // Reset everything if 'AC' is pressed
@@ -51,12 +51,12 @@ buttons.forEach(button => {
             
             // Store the operator and update the screen
             currentOperator = buttonValue;
-            updateScreen('', `${firstNumber} ${currentOperator}`);
+            updateScreen('', `${formatNumber(firstNumber)} ${currentOperator}`);
         } else if (buttonValue === '=') {
             // If '=' is pressed, calculate the result
             if (firstNumber && secondNumber && currentOperator) {
                 const result = calculate(Number(firstNumber), Number(secondNumber), currentOperator);
-                updateScreen(formatNumber(result), `${firstNumber} ${currentOperator} ${secondNumber} =`);
+                updateScreen(formatNumber(result), `${formatNumber(firstNumber)} ${currentOperator} ${formatNumber(secondNumber)} =`);
                 resultDisplayed = true; // Mark that the result has been displayed
                 firstNumber = result; // Store the result as the first number for new operations
                 secondNumber = '';
@@ -83,11 +83,12 @@ function updateScreen(result, operation) {
 
 // Function to format the result if it exceeds a certain number of digits
 function formatNumber(number) {
+    // If number is a string, remove extra zeros
     const numStr = number.toString();
     
     // If the result has more than MAX_DIGITS digits, use scientific notation
     if (numStr.replace('.', '').length > MAX_DIGITS) {
-        return number.toExponential(5); // Keep 5 decimal places in scientific notation
+        return Number(number).toExponential(5); // Keep 5 decimal places in scientific notation
     }
     
     return number;
