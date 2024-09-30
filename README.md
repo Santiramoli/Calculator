@@ -12,8 +12,7 @@ A simple and functional calculator built using [![My Skills](https://skillicons.
 ### Additional functionalities:
   - Negation `+/-`
   - Percentage `%`
-
-  - Scientific notation for results exceeding 10 digits.
+  -  Scientific notation for results exceeding 10 digits.
   - User-friendly interface for ease of use.
 
 
